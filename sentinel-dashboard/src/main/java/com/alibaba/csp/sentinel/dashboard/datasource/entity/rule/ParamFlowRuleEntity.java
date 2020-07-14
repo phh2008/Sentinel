@@ -109,7 +109,7 @@ public class ParamFlowRuleEntity extends AbstractRuleEntity<ParamFlowRule> {
     @JsonIgnore
     @JSONField(serialize = false)
     public boolean isClusterMode() {
-        return rule.isClusterMode();
+        return rule != null && rule.isClusterMode();
     }
 
     @JsonIgnore
